@@ -171,7 +171,9 @@
                                           description:@"这是一条测试信息"
                                             mediaType:SSPublishContentMediaTypeNews];
 
-    [ShareSDK showShareViewWithType:type container:self content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+    id<ISSContainer> container = [ShareSDK container];
+    [container setIPhoneContainerWithViewController:self];
+    [ShareSDK showShareViewWithType:type container:container content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
         if (state == SSResponseStateSuccess)
         {
             NSLog(NSLocalizedString(@"TEXT_ShARE_SUC", @"分享成功"));
