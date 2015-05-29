@@ -77,6 +77,7 @@
     //设置颜色
     [self.functionView setColorSelectedBlock:^(NSInteger colorIndex) {
         Segment = (int)colorIndex;
+        SegmentWidth = 8;
     }];
     
     
@@ -109,7 +110,6 @@
                     });
                 }];
             }
-            
         });
     }];
     
