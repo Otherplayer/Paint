@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "BEFunctionView.h"
 #import "GGCamera.h"
+#import "VMProgressHUD.h"
 
 @interface ViewController (){
     BOOL functionViewIsHidden;
@@ -112,6 +113,22 @@
         });
     }];
     
+    //分享
+    [self.functionView setShareDidClickedBlock:^(NSInteger index) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (index == 0) {
+                CGFloat heightOfFunctionView = BEScreenWidth / 3.0 * 2;
+                [weakSelf.functionView setFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
+                functionViewIsHidden = YES;
+                
+                UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 0, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2)];
+                UIImageWriteToSavedPhotosAlbum(image,nil, nil, nil);
+                [[VMProgressHUD sharedInstance] showTipTextOnly:@"截图已保存到相册" dealy:1.2];
+            }
+        });
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,13 +143,7 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
-    if (!functionViewIsHidden) {
-        CGFloat heightOfFunctionView = BEScreenWidth / 3.0 * 2;
-        [UIView animateWithDuration:0.25 animations:^{
-            [self.functionView setFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
-            functionViewIsHidden = YES;
-        }];
-    }
+    [self hidenFunctionView];
     
     
     [ColorButton removeAllSegments];
@@ -169,7 +180,15 @@
 }
 
 
-
+- (void)hidenFunctionView{
+    if (!functionViewIsHidden) {
+        CGFloat heightOfFunctionView = BEScreenWidth / 3.0 * 2;
+        [UIView animateWithDuration:0.25 animations:^{
+            [self.functionView setFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
+            functionViewIsHidden = YES;
+        }];
+    }
+}
 
 
 

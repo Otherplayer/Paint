@@ -15,5 +15,7 @@
 @property (nonatomic, strong)void(^eraserDidClickedBlock)();
 @property (nonatomic, strong)void(^paintDidClickedBlock)();
 @property (nonatomic, strong)void(^cameraDidClickedBlock)(NSInteger index);
+@property (nonatomic, strong)void(^shareDidClickedBlock)(NSInteger index);
+
 
 @end

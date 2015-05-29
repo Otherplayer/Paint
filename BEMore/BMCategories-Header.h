@@ -10,4 +10,5 @@
 #define BEMore_BMCategories_Header_h
 
 #import "UINavigationController+VMAdditions.h"
+#import "UIImage+Capture.h"
 #endif

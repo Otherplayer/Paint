@@ -21,6 +21,9 @@
 		638528D01B18CABE005E7D39 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638528CF1B18CABE005E7D39 /* CoreGraphics.framework */; };
 		638528D21B18CACE005E7D39 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638528D11B18CACE005E7D39 /* QuartzCore.framework */; };
 		638528D51B18D575005E7D39 /* GGCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 638528D41B18D575005E7D39 /* GGCamera.m */; };
+		638528D81B18DDAC005E7D39 /* UIImage+Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = 638528D71B18DDAC005E7D39 /* UIImage+Capture.m */; };
+		638528DB1B18E1A2005E7D39 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 638528DA1B18E1A2005E7D39 /* MBProgressHUD.m */; };
+		638528DE1B18E1C4005E7D39 /* VMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 638528DD1B18E1C4005E7D39 /* VMProgressHUD.m */; };
 		6393AD131B17616800239BB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6393AD121B17616800239BB6 /* main.m */; };
 		6393AD161B17616800239BB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6393AD151B17616800239BB6 /* AppDelegate.m */; };
 		6393AD191B17616800239BB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6393AD181B17616800239BB6 /* ViewController.m */; };
@@ -65,6 +68,12 @@
 		638528D11B18CACE005E7D39 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		638528D31B18D575005E7D39 /* GGCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCamera.h; sourceTree = "<group>"; };
 		638528D41B18D575005E7D39 /* GGCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGCamera.m; sourceTree = "<group>"; };
+		638528D61B18DDAC005E7D39 /* UIImage+Capture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Capture.h"; sourceTree = "<group>"; };
+		638528D71B18DDAC005E7D39 /* UIImage+Capture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Capture.m"; sourceTree = "<group>"; };
+		638528D91B18E1A2005E7D39 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		638528DA1B18E1A2005E7D39 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		638528DC1B18E1C4005E7D39 /* VMProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMProgressHUD.h; sourceTree = "<group>"; };
+		638528DD1B18E1C4005E7D39 /* VMProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMProgressHUD.m; sourceTree = "<group>"; };
 		6393AD0D1B17616800239BB6 /* BEMore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BEMore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6393AD111B17616800239BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6393AD121B17616800239BB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +127,10 @@
 				638528B81B18B413005E7D39 /* BEFunctionView.m */,
 				638528CC1B18CA94005E7D39 /* Palette.h */,
 				638528CD1B18CA94005E7D39 /* Palette.m */,
+				638528D91B18E1A2005E7D39 /* MBProgressHUD.h */,
+				638528DA1B18E1A2005E7D39 /* MBProgressHUD.m */,
+				638528DC1B18E1C4005E7D39 /* VMProgressHUD.h */,
+				638528DD1B18E1C4005E7D39 /* VMProgressHUD.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -199,11 +212,13 @@
 		6393AD371B17629F00239BB6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				6393AD3B1B17635300239BB6 /* BMCategories-Header.h */,
 				6393AD381B17633000239BB6 /* UINavigationController+VMAdditions.h */,
 				6393AD391B17633000239BB6 /* UINavigationController+VMAdditions.m */,
-				6393AD3B1B17635300239BB6 /* BMCategories-Header.h */,
 				638528D31B18D575005E7D39 /* GGCamera.h */,
 				638528D41B18D575005E7D39 /* GGCamera.m */,
+				638528D61B18DDAC005E7D39 /* UIImage+Capture.h */,
+				638528D71B18DDAC005E7D39 /* UIImage+Capture.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -346,9 +361,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6393AD191B17616800239BB6 /* ViewController.m in Sources */,
+				638528DE1B18E1C4005E7D39 /* VMProgressHUD.m in Sources */,
 				6393AD161B17616800239BB6 /* AppDelegate.m in Sources */,
 				638528D51B18D575005E7D39 /* GGCamera.m in Sources */,
 				6393AD3A1B17633000239BB6 /* UINavigationController+VMAdditions.m in Sources */,
+				638528DB1B18E1A2005E7D39 /* MBProgressHUD.m in Sources */,
+				638528D81B18DDAC005E7D39 /* UIImage+Capture.m in Sources */,
 				638528CE1B18CA94005E7D39 /* Palette.m in Sources */,
 				6393AD131B17616800239BB6 /* main.m in Sources */,
 				638528B91B18B413005E7D39 /* BEFunctionView.m in Sources */,

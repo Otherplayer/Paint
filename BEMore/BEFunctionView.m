@@ -207,7 +207,9 @@
 }
 
 - (void)shareButtonClicked:(UIButton *)sender{
-
+    if (self.shareDidClickedBlock) {
+        self.shareDidClickedBlock(sender.tag - kShareButtonStartTag);
+    }
 }
 
 
