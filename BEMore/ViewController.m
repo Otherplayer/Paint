@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;//背景照片
 @property (weak, nonatomic) IBOutlet UIView *paintView;//画布
 
+@property (weak, nonatomic) IBOutlet UIView *firstView;
 
 @end
 
@@ -38,6 +39,8 @@
     [self.navigationController applyAppDefaultApprence];
     [self.navigationController setHide:YES];
     
+    
+    [self.paintView setHidden:YES];
     SegmentWidth = 8;
     
 }
@@ -56,9 +59,10 @@
     }
     
     self.functionView = [[BEFunctionView alloc] initWithFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
-    
     [self.functionView setBackgroundColor:[UIColor cyanColor]];
     [self.view addSubview:self.functionView];
+    [self.functionView setHidden:YES];
+    
     [self.view bringSubviewToFront:self.functionView];
     functionViewIsHidden = YES;
     
@@ -117,13 +121,23 @@
     [self.functionView setShareDidClickedBlock:^(NSInteger index) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (index == 0) {
-                CGFloat heightOfFunctionView = BEScreenWidth / 3.0 * 2;
-                [weakSelf.functionView setFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
-                functionViewIsHidden = YES;
                 
-                UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 0, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2)];
-                UIImageWriteToSavedPhotosAlbum(image,nil, nil, nil);
-                [[VMProgressHUD sharedInstance] showTipTextOnly:@"截图已保存到相册" dealy:1.2];
+                [UIView animateWithDuration:0.15 animations:^{
+                    CGFloat heightOfFunctionView = BEScreenWidth / 3.0 * 2;
+                    [weakSelf.functionView setFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
+                    functionViewIsHidden = YES;
+                    
+                } completion:^(BOOL finished) {
+                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 0, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2)];
+                    UIImageWriteToSavedPhotosAlbum(image,nil, nil, nil);
+                    [[VMProgressHUD sharedInstance] showTipTextOnly:@"截图已保存到相册" dealy:1.2];
+                    
+                }];
+            }else if (index == 1){
+            
+                
+            }else{
+                
             }
         });
         
@@ -142,6 +156,10 @@
 //手指开始触屏开始
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
+    if (self.paintView.isHidden) {
+        return;
+    }
     
     [self hidenFunctionView];
     
@@ -162,6 +180,11 @@
 //手指移动时候发出
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
+    if (self.paintView.isHidden) {
+        return;
+    }
+    
     NSArray* MovePointArray=[touches allObjects];
     MyMovepoint=[[MovePointArray objectAtIndex:0] locationInView:self.paintView];
     [(Palette*)self.paintView Introductionpoint3:MyMovepoint];
@@ -170,6 +193,11 @@
 //当手指离开屏幕时候
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    
+    if (self.paintView.isHidden) {
+        return;
+    }
+    
     [(Palette*)self.paintView Introductionpoint2];
     [self.paintView setNeedsDisplay];
 }
@@ -189,6 +217,15 @@
         }];
     }
 }
+
+
+- (IBAction)startHereAction:(id)sender {
+    
+    [self.firstView setHidden:YES];
+    [self.functionView setHidden:NO];
+    [self.paintView setHidden:NO];
+}
+
 
 
 

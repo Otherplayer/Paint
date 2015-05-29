@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MBProgressHUD.h"
+#import <MBProgressHUD.h>
 
 @interface VMProgressHUD : NSObject
 @property (nonatomic, strong)MBProgressHUD *HUD;
