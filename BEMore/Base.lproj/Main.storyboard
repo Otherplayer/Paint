@@ -92,12 +92,12 @@
                                         <exclude reference="fV1-Ox-ucB"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="HQ5-MA-OXI"/>
+                                        <exclude reference="fqT-Gr-o4F"/>
                                         <exclude reference="20I-Sh-h8D"/>
                                         <exclude reference="UJs-zN-hst"/>
                                         <exclude reference="evb-sH-mU4"/>
                                         <exclude reference="kKT-Jd-CNH"/>
-                                        <exclude reference="HQ5-MA-OXI"/>
-                                        <exclude reference="fqT-Gr-o4F"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -106,12 +106,12 @@
                                         <include reference="fV1-Ox-ucB"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="HQ5-MA-OXI"/>
+                                        <include reference="fqT-Gr-o4F"/>
                                         <include reference="20I-Sh-h8D"/>
                                         <include reference="UJs-zN-hst"/>
                                         <include reference="evb-sH-mU4"/>
                                         <include reference="kKT-Jd-CNH"/>
-                                        <include reference="HQ5-MA-OXI"/>
-                                        <include reference="fqT-Gr-o4F"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -147,22 +147,22 @@
                                 <exclude reference="2tb-hb-xHp"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="DLf-cJ-yFe"/>
-                                <exclude reference="ffw-Rt-byw"/>
-                                <exclude reference="kaf-7U-npf"/>
+                                <exclude reference="ZpU-EP-5Ja"/>
+                                <exclude reference="d2V-Sq-1ol"/>
+                                <exclude reference="kre-VX-GxU"/>
+                                <exclude reference="usJ-f4-zdd"/>
                                 <exclude reference="KKT-FP-u74"/>
                                 <exclude reference="eV0-pd-vvZ"/>
                                 <exclude reference="jrd-Te-84B"/>
                                 <exclude reference="BU9-6f-o0b"/>
                                 <exclude reference="JUn-kN-kai"/>
                                 <exclude reference="L5r-o6-nSz"/>
+                                <exclude reference="DLf-cJ-yFe"/>
+                                <exclude reference="ffw-Rt-byw"/>
+                                <exclude reference="kaf-7U-npf"/>
                                 <exclude reference="Fbb-iu-NiQ"/>
                                 <exclude reference="NR1-80-0pr"/>
                                 <exclude reference="WUj-We-5fQ"/>
-                                <exclude reference="ZpU-EP-5Ja"/>
-                                <exclude reference="d2V-Sq-1ol"/>
-                                <exclude reference="kre-VX-GxU"/>
-                                <exclude reference="usJ-f4-zdd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -173,22 +173,22 @@
                                 <include reference="2tb-hb-xHp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="DLf-cJ-yFe"/>
-                                <include reference="ffw-Rt-byw"/>
-                                <include reference="kaf-7U-npf"/>
+                                <include reference="ZpU-EP-5Ja"/>
+                                <include reference="d2V-Sq-1ol"/>
+                                <include reference="kre-VX-GxU"/>
+                                <include reference="usJ-f4-zdd"/>
                                 <include reference="KKT-FP-u74"/>
                                 <include reference="eV0-pd-vvZ"/>
                                 <include reference="jrd-Te-84B"/>
                                 <include reference="BU9-6f-o0b"/>
                                 <include reference="JUn-kN-kai"/>
                                 <include reference="L5r-o6-nSz"/>
+                                <include reference="DLf-cJ-yFe"/>
+                                <include reference="ffw-Rt-byw"/>
+                                <include reference="kaf-7U-npf"/>
                                 <include reference="Fbb-iu-NiQ"/>
                                 <include reference="NR1-80-0pr"/>
                                 <include reference="WUj-We-5fQ"/>
-                                <include reference="ZpU-EP-5Ja"/>
-                                <include reference="d2V-Sq-1ol"/>
-                                <include reference="kre-VX-GxU"/>
-                                <include reference="usJ-f4-zdd"/>
                             </mask>
                         </variation>
                     </view>

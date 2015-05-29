@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+#import "WeiboSDK.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +21,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [ShareSDK registerApp:@"13430bfccdca"];//字符串api20为您的ShareSDK的AppKey
+    [ShareSDK  connectSinaWeiboWithAppKey:@"2184736711"
+                                appSecret:@"d637c8d12d312ad89b601b592ccac0f3"
+                              redirectUri:@"http://open.weibo.com/apps/2184736711/info/advanced"
+                              weiboSDKCls:[WeiboSDK class]];
+    [ShareSDK connectWeChatWithAppId:@"wx348ba051588ac56f"   //微信APPID
+                           appSecret:@"6658d08d23e9ec41948ab785e2496bb3"  //微信APPSecret
+                           wechatCls:[WXApi class]];
+    
     return YES;
 }
 
@@ -40,6 +54,26 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+
+- (BOOL)application:(UIApplication *)application
+      handleOpenURL:(NSURL *)url
+{
+    return [ShareSDK handleOpenURL:url
+                        wxDelegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return [ShareSDK handleOpenURL:url
+                 sourceApplication:sourceApplication
+                        annotation:annotation
+                        wxDelegate:self];
 }
 
 @end

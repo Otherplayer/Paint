@@ -10,6 +10,8 @@
 #import "BEFunctionView.h"
 #import "GGCamera.h"
 #import "VMProgressHUD.h"
+#import <ShareSDK/ShareSDK.h>
+
 
 @interface ViewController (){
     BOOL functionViewIsHidden;
@@ -120,10 +122,12 @@
     //分享
     [self.functionView setShareDidClickedBlock:^(NSInteger index) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            
+            CGFloat heightOfFunctionView = BEScreenWidth / 3.0 * 2;
+            UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 0, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2)];
             if (index == 0) {
                 
                 [UIView animateWithDuration:0.15 animations:^{
-                    CGFloat heightOfFunctionView = BEScreenWidth / 3.0 * 2;
                     [weakSelf.functionView setFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
                     functionViewIsHidden = YES;
                     
@@ -135,9 +139,10 @@
                 }];
             }else if (index == 1){
             
-                
+                [weakSelf shareImage:image type:1];
+          
             }else{
-                
+                [weakSelf shareImage:image type:2];
             }
         });
         
@@ -148,6 +153,37 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)shareImage:(UIImage *)image type:(NSInteger)index{
+
+    ShareType type = ShareTypeWeixiSession;
+    if (index == 2) {
+        type = ShareTypeSinaWeibo;
+    }
+    
+    id<ISSContent> publishContent = [ShareSDK content:@"BE MORE"
+                                       defaultContent:@""
+                                                image:[ShareSDK pngImageWithImage:image]
+                                                title:@"ShareSDK"
+                                                  url:@"http://www.mob.com"
+                                          description:@"这是一条测试信息"
+                                            mediaType:SSPublishContentMediaTypeNews];
+
+    [ShareSDK showShareViewWithType:type container:self content:publishContent statusBarTips:YES authOptions:nil shareOptions:nil result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+        if (state == SSResponseStateSuccess)
+        {
+            NSLog(NSLocalizedString(@"TEXT_ShARE_SUC", @"分享成功"));
+            [[VMProgressHUD sharedInstance] showTipTextOnly:@"分享成功" dealy:1.2];
+        }
+        else if (state == SSResponseStateFail)
+        {
+            NSLog(NSLocalizedString(@"TEXT_ShARE_FAI", @"分享失败,错误码:%d,错误描述:%@"), [error errorCode], [error errorDescription]);
+            [[VMProgressHUD sharedInstance] showTipTextOnly:@"分享失败" dealy:1.2];
+        }
+    }];
+    
 }
 
 
