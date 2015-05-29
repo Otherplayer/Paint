@@ -10,4 +10,15 @@
 #define BEMore_AppGlobal_h
 
 
+
+#import "BMCategories-Header.h"
+
+#define BEScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define BEScreenHeight [[UIScreen mainScreen] bounds].size.height
+
+
+#define WS(weakSelf)          __weak __typeof(&*self)weakSelf = self;
+
+
+
 #endif

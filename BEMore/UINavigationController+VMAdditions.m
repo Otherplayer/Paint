@@ -11,7 +11,7 @@
 @implementation UINavigationController (VMAdditions)
 
 - (void)applyAppDefaultApprence{
-    [self applyApprenceWithBarTintColor:[UIColor defaultBlueColor] fontColor:[UIColor whiteColor]];
+    [self applyApprenceWithBarTintColor:[UIColor blueColor] fontColor:[UIColor whiteColor]];
 }
 
 - (void)applyApprenceWithBarTintColor:(UIColor *)tintColor fontColor:(UIColor *)fontColor{

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Palette.h"
+#import <QuartzCore/QuartzCore.h>
 @interface ViewController : UIViewController
 
 

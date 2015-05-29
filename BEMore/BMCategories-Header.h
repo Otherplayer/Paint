@@ -9,5 +9,5 @@
 #ifndef BEMore_BMCategories_Header_h
 #define BEMore_BMCategories_Header_h
 
-
+#import "UINavigationController+VMAdditions.h"
 #endif

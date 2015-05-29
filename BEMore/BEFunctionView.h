@@ -10,4 +10,10 @@
 
 @interface BEFunctionView : UIView
 
+@property (nonatomic, strong)void(^mainFunctionButtonClickedBlock)(NSInteger index);
+@property (nonatomic, strong)void(^colorSelectedBlock)(NSInteger colorIndex);
+@property (nonatomic, strong)void(^eraserDidClickedBlock)();
+@property (nonatomic, strong)void(^paintDidClickedBlock)();
+@property (nonatomic, strong)void(^cameraDidClickedBlock)(NSInteger index);
+
 @end

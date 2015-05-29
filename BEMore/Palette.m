@@ -27,33 +27,33 @@
 	switch (Intsegmentcolor)
 	{
 		case 0:
-			segmentColor=[[UIColor blackColor] CGColor];
+			segmentColor=[[UIColor colorWithRed:0.996 green:1.000 blue:0.043 alpha:1.000] CGColor];
 			break;
 		case 1:
 			segmentColor=[[UIColor redColor] CGColor];
 			break;
 		case 2:
-			segmentColor=[[UIColor blueColor] CGColor];
+			segmentColor=[[UIColor colorWithRed:0.957 green:0.498 blue:0.102 alpha:1.000] CGColor];
 
 			break;
 		case 3:
-			segmentColor=[[UIColor greenColor] CGColor];
+			segmentColor=[[UIColor colorWithRed:0.137 green:1.000 blue:0.035 alpha:1.000] CGColor];
 			break;
 		case 4:
-			segmentColor=[[UIColor yellowColor] CGColor];
+			segmentColor=[[UIColor colorWithRed:0.984 green:0.000 blue:1.000 alpha:1.000] CGColor];
 			break;
 		case 5:
-			segmentColor=[[UIColor orangeColor] CGColor];
+			segmentColor=[[UIColor colorWithRed:0.322 green:0.102 blue:0.494 alpha:1.000] CGColor];
 			break;
 		case 6:
-			segmentColor=[[UIColor grayColor] CGColor];
+			segmentColor=[[UIColor blueColor] CGColor];
 			break;
 		case 7:
-			segmentColor=[[UIColor purpleColor]CGColor];
+			segmentColor=[[UIColor whiteColor]CGColor];
 			break;
 		case 8:
 			
-			segmentColor=[[UIColor brownColor]CGColor];
+			segmentColor=[[UIColor blackColor]CGColor];
 			break;
 		case 9:
 			segmentColor=[[UIColor magentaColor]CGColor];
