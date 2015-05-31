@@ -132,7 +132,10 @@
                     functionViewIsHidden = YES;
                     
                 } completion:^(BOOL finished) {
-                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 0, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2)];
+                    
+                    //iphone6 69
+                    
+                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 20 + 49, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2 - 69)];
                     UIImageWriteToSavedPhotosAlbum(image,nil, nil, nil);
                     [[VMProgressHUD sharedInstance] showTipTextOnly:@"截图已保存到相册" dealy:1.2];
                     
