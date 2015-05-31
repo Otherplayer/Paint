@@ -11,4 +11,5 @@
 
 #import "UINavigationController+VMAdditions.h"
 #import "UIImage+Capture.h"
+#import "UIImage+Merge.h"
 #endif

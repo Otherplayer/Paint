@@ -12,6 +12,7 @@
 #import "VMProgressHUD.h"
 #import <ShareSDK/ShareSDK.h>
 #import "MTAnimatedLabel.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController (){
     BOOL functionViewIsHidden;
@@ -137,6 +138,14 @@
     [self.functionView setEraserDidClickedBlock:^{
         Segment = 10;
         SegmentWidth = 20;
+        
+        
+        //=====================================
+//        -(void)myalllineclear;
+//        -(void)myLineFinallyRemove;
+
+        [(Palette*)weakSelf.paintView myLineFinallyRemove];
+//        [(Palette*)weakSelf.paintView myalllineclear];
     }];
     
     //笔
@@ -192,19 +201,33 @@
                         height = BEScreenHeight - heightOfFunctionView / 2 - 60;
                     }
                     
+                    CGRect rect = CGRectMake(x, y, width, height);
+                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:rect];
                     
-                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(x, y, width, height)];
+                    
+                    
+                    CGRect imageViewRect = weakSelf.view.frame;
+                    imageViewRect.origin.y = -y;
+                    UIImageView *imageView = [[UIImageView alloc] initWithFrame:imageViewRect];
+                    [imageView setImage:image];
+                    
+                    UIView *tempView = [[UIView alloc] initWithFrame:rect];
+                    [tempView addSubview:imageView];
+                    
+                    
+                    
+                    UIImage *targetImage = [UIImage imageFromView2:tempView atFrame:rect];
                     if (index == 0) {
                         
-                        UIImageWriteToSavedPhotosAlbum(image,nil, nil, nil);
+                        UIImageWriteToSavedPhotosAlbum(targetImage,nil, nil, nil);
                         [[VMProgressHUD sharedInstance] showTipTextOnly:@"截图已保存到相册" dealy:1.2];
                         
                     }else if (index == 1){
                         
-                        [weakSelf shareImage:image type:1];
+                        [weakSelf shareImage:targetImage type:1];
                         
                     }else{
-                        [weakSelf shareImage:image type:2];
+                        [weakSelf shareImage:targetImage type:2];
                     }
                     
                     

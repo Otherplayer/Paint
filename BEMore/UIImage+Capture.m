@@ -42,6 +42,22 @@
     CGContextSaveGState(context);
     UIRectClip(r);
     [theView.layer renderInContext:context];
+    
+    
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return  theImage;//[self getImageAreaFromImage:theImage atFrame:r];
+}
+
++ (UIImage *)imageFromView2: (UIView *) theView   atFrame:(CGRect)r
+{
+    UIGraphicsBeginImageContext(r.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    UIRectClip(CGRectMake(0, 0, r.size.width, r.size.height));
+    [theView.layer renderInContext:context];
     UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     

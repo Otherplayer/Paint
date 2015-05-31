@@ -12,4 +12,5 @@
 + (UIImage *)captureWithView:(UIView *)view;
 
 + (UIImage *)imageFromView: (UIView *) theView   atFrame:(CGRect)r;
++ (UIImage *)imageFromView2: (UIView *) theView   atFrame:(CGRect)r;
 @end

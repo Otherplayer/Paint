@@ -59,6 +59,7 @@
 		6393AD481B17651E00239BB6 /* start1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD461B17651E00239BB6 /* start1@2x.png */; };
 		6393AD4A1B17665A00239BB6 /* app2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD491B17665A00239BB6 /* app2.png */; };
 		63C2EAA61B1ADB71005482E3 /* MTAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2EAA51B1ADB71005482E3 /* MTAnimatedLabel.m */; };
+		63C2EAA91B1B03AD005482E3 /* UIImage+Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2EAA81B1B03AD005482E3 /* UIImage+Merge.m */; };
 		BE917464ADF56CD9DAF59827 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA6A0A1DEEA7EB0DFF703F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +148,8 @@
 		6393AD491B17665A00239BB6 /* app2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app2.png; sourceTree = "<group>"; };
 		63C2EAA41B1ADB71005482E3 /* MTAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAnimatedLabel.h; sourceTree = "<group>"; };
 		63C2EAA51B1ADB71005482E3 /* MTAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAnimatedLabel.m; sourceTree = "<group>"; };
+		63C2EAA71B1B03AD005482E3 /* UIImage+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Merge.h"; sourceTree = "<group>"; };
+		63C2EAA81B1B03AD005482E3 /* UIImage+Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Merge.m"; sourceTree = "<group>"; };
 		7BA6A0A1DEEA7EB0DFF703F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		99910F73610D128F0D5DF269 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -359,6 +362,8 @@
 				6393AD391B17633000239BB6 /* UINavigationController+VMAdditions.m */,
 				638528D31B18D575005E7D39 /* GGCamera.h */,
 				638528D41B18D575005E7D39 /* GGCamera.m */,
+				63C2EAA71B1B03AD005482E3 /* UIImage+Merge.h */,
+				63C2EAA81B1B03AD005482E3 /* UIImage+Merge.m */,
 				638528D61B18DDAC005E7D39 /* UIImage+Capture.h */,
 				638528D71B18DDAC005E7D39 /* UIImage+Capture.m */,
 			);
@@ -578,6 +583,7 @@
 				63C2EAA61B1ADB71005482E3 /* MTAnimatedLabel.m in Sources */,
 				638528CE1B18CA94005E7D39 /* Palette.m in Sources */,
 				6393AD131B17616800239BB6 /* main.m in Sources */,
+				63C2EAA91B1B03AD005482E3 /* UIImage+Merge.m in Sources */,
 				638528B91B18B413005E7D39 /* BEFunctionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
