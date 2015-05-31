@@ -11,7 +11,7 @@
 #import "GGCamera.h"
 #import "VMProgressHUD.h"
 #import <ShareSDK/ShareSDK.h>
-
+#import "MTAnimatedLabel.h"
 
 @interface ViewController (){
     BOOL functionViewIsHidden;
@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIView *paintView;//画布
 
 @property (weak, nonatomic) IBOutlet UIView *firstView;
+@property (weak, nonatomic) IBOutlet MTAnimatedLabel *labelAnimation;
 
 @end
 
@@ -44,6 +45,16 @@
     
     [self.paintView setHidden:YES];
     SegmentWidth = 8;
+    
+    
+    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:35];
+//        MTAnimatedLabel *label1 = [[MTAnimatedLabel alloc]initWithFrame:CGRectMake(100, 160, 300, 100)];
+        [self.labelAnimation setTextColor:[UIColor blueColor]];
+        [self.labelAnimation setFont:font];
+        [self.labelAnimation setText:@"[Start here]"];
+        [self.labelAnimation setTint:[UIColor cyanColor]];
+        [self.labelAnimation startAnimating];
+//        [self.view addSubview:label1];
     
 }
 
@@ -262,6 +273,7 @@
 
 - (IBAction)startHereAction:(id)sender {
     
+    [self.labelAnimation stopAnimating];
     [self.firstView setHidden:YES];
     [self.functionView setHidden:NO];
     [self.paintView setHidden:NO];

@@ -58,6 +58,7 @@
 		6393AD471B17651E00239BB6 /* start2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD451B17651E00239BB6 /* start2@2x.png */; };
 		6393AD481B17651E00239BB6 /* start1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD461B17651E00239BB6 /* start1@2x.png */; };
 		6393AD4A1B17665A00239BB6 /* app2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD491B17665A00239BB6 /* app2.png */; };
+		63C2EAA61B1ADB71005482E3 /* MTAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2EAA51B1ADB71005482E3 /* MTAnimatedLabel.m */; };
 		BE917464ADF56CD9DAF59827 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA6A0A1DEEA7EB0DFF703F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,8 @@
 		6393AD451B17651E00239BB6 /* start2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start2@2x.png"; sourceTree = "<group>"; };
 		6393AD461B17651E00239BB6 /* start1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start1@2x.png"; sourceTree = "<group>"; };
 		6393AD491B17665A00239BB6 /* app2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app2.png; sourceTree = "<group>"; };
+		63C2EAA41B1ADB71005482E3 /* MTAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAnimatedLabel.h; sourceTree = "<group>"; };
+		63C2EAA51B1ADB71005482E3 /* MTAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAnimatedLabel.m; sourceTree = "<group>"; };
 		7BA6A0A1DEEA7EB0DFF703F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		99910F73610D128F0D5DF269 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +197,8 @@
 				638528CD1B18CA94005E7D39 /* Palette.m */,
 				638528DC1B18E1C4005E7D39 /* VMProgressHUD.h */,
 				638528DD1B18E1C4005E7D39 /* VMProgressHUD.m */,
+				63C2EAA41B1ADB71005482E3 /* MTAnimatedLabel.h */,
+				63C2EAA51B1ADB71005482E3 /* MTAnimatedLabel.m */,
 				638528DF1B18E95A005E7D39 /* CUSFlashLabel.h */,
 				638528E01B18E95A005E7D39 /* CUSFlashLabel.m */,
 			);
@@ -570,6 +575,7 @@
 				6393AD3A1B17633000239BB6 /* UINavigationController+VMAdditions.m in Sources */,
 				638528E11B18E95A005E7D39 /* CUSFlashLabel.m in Sources */,
 				638528D81B18DDAC005E7D39 /* UIImage+Capture.m in Sources */,
+				63C2EAA61B1ADB71005482E3 /* MTAnimatedLabel.m in Sources */,
 				638528CE1B18CA94005E7D39 /* Palette.m in Sources */,
 				6393AD131B17616800239BB6 /* main.m in Sources */,
 				638528B91B18B413005E7D39 /* BEFunctionView.m in Sources */,
