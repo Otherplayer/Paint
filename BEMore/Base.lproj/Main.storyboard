@@ -35,6 +35,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35m-ki-8eC" userLabel="PaintView" customClass="Palette">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Itp-aj-3UY">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tb-hb-xHp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -110,13 +117,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35m-ki-8eC" userLabel="PaintView" customClass="Palette">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Itp-aj-3UY">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -131,15 +131,15 @@
                             <constraint firstItem="Itp-aj-3UY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jrd-Te-84B"/>
                             <constraint firstItem="2tb-hb-xHp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kaf-7U-npf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Itp-aj-3UY" secondAttribute="bottom" constant="108" id="kre-VX-GxU">
-                                <variation key="widthClass=compact" constant="0.0"/>
+                                <variation key="widthClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="35m-ki-8eC" secondAttribute="bottom" constant="114" id="usJ-f4-zdd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="2tb-hb-xHp"/>
                                 <exclude reference="35m-ki-8eC"/>
                                 <exclude reference="Itp-aj-3UY"/>
+                                <exclude reference="2tb-hb-xHp"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ZpU-EP-5Ja"/>
@@ -158,9 +158,9 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="2tb-hb-xHp"/>
                                 <include reference="35m-ki-8eC"/>
                                 <include reference="Itp-aj-3UY"/>
+                                <include reference="2tb-hb-xHp"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="ZpU-EP-5Ja"/>

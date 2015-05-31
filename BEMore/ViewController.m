@@ -49,27 +49,26 @@
     CGFloat height = BEScreenHeight - y - 150;
     
     if (IS_IPHONE6_PLUS) {
-        x = 35;
-        y = 95;
-        width = BEScreenWidth - x * 2;
+        x = 25;
+        y = 85;
+        width = BEScreenWidth - x * 2 - 3;
         height = BEScreenHeight - y - 150;
     }else if (IS_IPHONE6){
-        x = 30;
-        y = 90;
+        x = 20;
+        y = 80;
         width = BEScreenWidth - x * 2;
-        height = BEScreenHeight - y - 140;
+        height = BEScreenHeight - y - 138;
     }else if (IS_IPHONE5){
-        x = 25;
-        y = 77;
-        width = BEScreenWidth - x * 2;
-        height = BEScreenHeight - y - 115;
-    }else{
-        x = 25;
+        x = 15;
         y = 70;
-        width = BEScreenWidth - x * 2;
-        height = BEScreenHeight - y - 110;
+        width = BEScreenWidth - x * 2 - 4;
+        height = BEScreenHeight - y - 120;
+    }else{
+        x = 15;
+        y = 60;
+        width = BEScreenWidth - x * 2 - 3;
+        height = BEScreenHeight - y - 105;
     }
-    
     
     self.backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
     [self.backgroundImageView setBackgroundColor:[UIColor clearColor]];
@@ -198,22 +197,22 @@
                     CGFloat height = BEScreenHeight - heightOfFunctionView / 2 - 50;
                     if (IS_IPHONE4) {
                         y = 20 + 30;
-                        height = BEScreenHeight - heightOfFunctionView / 2 - 10;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 33;
                     }else if (IS_IPHONE6_PLUS){
                         x = 0;
                         y = 20 + 49;
                         width = BEScreenWidth;
-                        height = BEScreenHeight - heightOfFunctionView / 2 - 50;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 60;
                     }else if (IS_IPHONE6){
                         x = 0;
-                        y = 20 + 45;
+                        y = 20 + 42;
                         width = BEScreenWidth;
-                        height = BEScreenHeight - heightOfFunctionView / 2 - 40;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 55;
                     }else if (IS_IPHONE5){
                         x = 0;
                         y = 20 + 35;
                         width = BEScreenWidth;
-                        height = BEScreenHeight - heightOfFunctionView / 2 - 40;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 50;
                     }
                     
                     CGRect rect = CGRectMake(x, y, width, height);
