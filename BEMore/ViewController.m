@@ -208,6 +208,7 @@
                     
                     CGRect imageViewRect = weakSelf.view.frame;
                     imageViewRect.origin.y = -y;
+                    imageViewRect.origin.x = -10;
                     UIImageView *imageView = [[UIImageView alloc] initWithFrame:imageViewRect];
                     [imageView setImage:image];
                     
@@ -215,8 +216,11 @@
                     [tempView addSubview:imageView];
                     
                     
+                    CGRect targetRect = rect;
+                    targetRect.size.width = rect.size.width - 20;
+                    UIImage *targetImage = [UIImage imageFromView2:tempView atFrame:targetRect];
                     
-                    UIImage *targetImage = [UIImage imageFromView2:tempView atFrame:rect];
+                    
                     if (index == 0) {
                         
                         UIImageWriteToSavedPhotosAlbum(targetImage,nil, nil, nil);
