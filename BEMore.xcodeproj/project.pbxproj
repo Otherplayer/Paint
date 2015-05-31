@@ -57,9 +57,9 @@
 		6393AD441B1764F500239BB6 /* app_15_l@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD411B1764F500239BB6 /* app_15_l@2x.png */; };
 		6393AD471B17651E00239BB6 /* start2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD451B17651E00239BB6 /* start2@2x.png */; };
 		6393AD481B17651E00239BB6 /* start1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD461B17651E00239BB6 /* start1@2x.png */; };
-		6393AD4A1B17665A00239BB6 /* app2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6393AD491B17665A00239BB6 /* app2.png */; };
 		63C2EAA61B1ADB71005482E3 /* MTAnimatedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2EAA51B1ADB71005482E3 /* MTAnimatedLabel.m */; };
 		63C2EAA91B1B03AD005482E3 /* UIImage+Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C2EAA81B1B03AD005482E3 /* UIImage+Merge.m */; };
+		63F8B27F1B1B624600433009 /* app2.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F8B27E1B1B624600433009 /* app2.png */; };
 		BE917464ADF56CD9DAF59827 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA6A0A1DEEA7EB0DFF703F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -145,11 +145,11 @@
 		6393AD411B1764F500239BB6 /* app_15_l@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_15_l@2x.png"; sourceTree = "<group>"; };
 		6393AD451B17651E00239BB6 /* start2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start2@2x.png"; sourceTree = "<group>"; };
 		6393AD461B17651E00239BB6 /* start1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start1@2x.png"; sourceTree = "<group>"; };
-		6393AD491B17665A00239BB6 /* app2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app2.png; sourceTree = "<group>"; };
 		63C2EAA41B1ADB71005482E3 /* MTAnimatedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAnimatedLabel.h; sourceTree = "<group>"; };
 		63C2EAA51B1ADB71005482E3 /* MTAnimatedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAnimatedLabel.m; sourceTree = "<group>"; };
 		63C2EAA71B1B03AD005482E3 /* UIImage+Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Merge.h"; sourceTree = "<group>"; };
 		63C2EAA81B1B03AD005482E3 /* UIImage+Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Merge.m"; sourceTree = "<group>"; };
+		63F8B27E1B1B624600433009 /* app2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app2.png; sourceTree = "<group>"; };
 		7BA6A0A1DEEA7EB0DFF703F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		99910F73610D128F0D5DF269 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -387,7 +387,7 @@
 				638528C81B18C856005E7D39 /* app_19share@2x.png */,
 				6393AD451B17651E00239BB6 /* start2@2x.png */,
 				6393AD461B17651E00239BB6 /* start1@2x.png */,
-				6393AD491B17665A00239BB6 /* app2.png */,
+				63F8B27E1B1B624600433009 /* app2.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -506,7 +506,6 @@
 				6393AD421B1764F500239BB6 /* app_13_l@2x.png in Resources */,
 				638528C11B18BF14005E7D39 /* app_ca@2x.png in Resources */,
 				638529251B18F481005E7D39 /* ShareSDKFlatShareViewUI.bundle in Resources */,
-				6393AD4A1B17665A00239BB6 /* app2.png in Resources */,
 				6393AD211B17616800239BB6 /* LaunchScreen.xib in Resources */,
 				638528CB1B18C856005E7D39 /* app_19share@2x.png in Resources */,
 				638528CA1B18C856005E7D39 /* app_18share@2x.png in Resources */,
@@ -514,6 +513,7 @@
 				638528C91B18C856005E7D39 /* app_13share@2x.png in Resources */,
 				6393AD431B1764F500239BB6 /* app_14_l@2x.png in Resources */,
 				638529221B18F481005E7D39 /* WeiboSDK.bundle in Resources */,
+				63F8B27F1B1B624600433009 /* app2.png in Resources */,
 				638528C41B18C7AB005E7D39 /* app_16@2x.png in Resources */,
 				6393AD481B17651E00239BB6 /* start1@2x.png in Resources */,
 				6393AD471B17651E00239BB6 /* start2@2x.png in Resources */,
@@ -675,7 +675,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "afb02b51-302a-4a1b-b43a-24f5e3e04e9b";
+				PROVISIONING_PROFILE = "13ec34f1-04ca-4891-8e74-1671cac6ea58";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,8 +698,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: XianShun Chen (75FLFJ42ES)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xtreme Programming Group, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xtreme Programming Group, Inc.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -714,7 +714,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "afb02b51-302a-4a1b-b43a-24f5e3e04e9b";
+				PROVISIONING_PROFILE = "13ec34f1-04ca-4891-8e74-1671cac6ea58";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -744,6 +744,7 @@
 					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
 				);
 				INFOPLIST_FILE = BEMore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -751,7 +752,7 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "afb02b51-302a-4a1b-b43a-24f5e3e04e9b";
+				PROVISIONING_PROFILE = "13ec34f1-04ca-4891-8e74-1671cac6ea58";
 			};
 			name = Debug;
 		};
@@ -761,8 +762,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: XianShun Chen (75FLFJ42ES)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: XianShun Chen (75FLFJ42ES)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xtreme Programming Group, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xtreme Programming Group, Inc.";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShareSDK/Connection",
@@ -778,6 +779,7 @@
 					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
 				);
 				INFOPLIST_FILE = BEMore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -785,7 +787,7 @@
 					"$(PROJECT_DIR)/ShareSDK/Extend/WeChatSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "afb02b51-302a-4a1b-b43a-24f5e3e04e9b";
+				PROVISIONING_PROFILE = "13ec34f1-04ca-4891-8e74-1671cac6ea58";
 			};
 			name = Release;
 		};
@@ -805,7 +807,7 @@
 				INFOPLIST_FILE = BEMoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "afb02b51-302a-4a1b-b43a-24f5e3e04e9b";
+				PROVISIONING_PROFILE = "13ec34f1-04ca-4891-8e74-1671cac6ea58";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BEMore.app/BEMore";
 			};
 			name = Debug;
@@ -814,7 +816,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: XianShun Chen (75FLFJ42ES)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Xtreme Programming Group, Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xtreme Programming Group, Inc.";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -822,7 +825,7 @@
 				INFOPLIST_FILE = BEMoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "afb02b51-302a-4a1b-b43a-24f5e3e04e9b";
+				PROVISIONING_PROFILE = "13ec34f1-04ca-4891-8e74-1671cac6ea58";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BEMore.app/BEMore";
 			};
 			name = Release;

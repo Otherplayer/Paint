@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bsN-rX-pu4">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -34,13 +35,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35m-ki-8eC" userLabel="PaintView" customClass="Palette">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Itp-aj-3UY">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tb-hb-xHp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -58,7 +52,7 @@
                                             </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -93,12 +87,12 @@
                                         <exclude reference="0j3-cG-Ztd"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="f4E-jx-Z1l"/>
+                                        <exclude reference="iaD-5N-ekp"/>
                                         <exclude reference="20I-Sh-h8D"/>
                                         <exclude reference="UJs-zN-hst"/>
                                         <exclude reference="evb-sH-mU4"/>
                                         <exclude reference="kKT-Jd-CNH"/>
-                                        <exclude reference="f4E-jx-Z1l"/>
-                                        <exclude reference="iaD-5N-ekp"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -107,15 +101,22 @@
                                         <include reference="0j3-cG-Ztd"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="f4E-jx-Z1l"/>
+                                        <include reference="iaD-5N-ekp"/>
                                         <include reference="20I-Sh-h8D"/>
                                         <include reference="UJs-zN-hst"/>
                                         <include reference="evb-sH-mU4"/>
                                         <include reference="kKT-Jd-CNH"/>
-                                        <include reference="f4E-jx-Z1l"/>
-                                        <include reference="iaD-5N-ekp"/>
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35m-ki-8eC" userLabel="PaintView" customClass="Palette">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Itp-aj-3UY">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,9 +137,9 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="2tb-hb-xHp"/>
                                 <exclude reference="35m-ki-8eC"/>
                                 <exclude reference="Itp-aj-3UY"/>
-                                <exclude reference="2tb-hb-xHp"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ZpU-EP-5Ja"/>
@@ -157,9 +158,9 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="2tb-hb-xHp"/>
                                 <include reference="35m-ki-8eC"/>
                                 <include reference="Itp-aj-3UY"/>
-                                <include reference="2tb-hb-xHp"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="ZpU-EP-5Ja"/>

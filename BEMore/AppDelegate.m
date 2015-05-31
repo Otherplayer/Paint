@@ -31,6 +31,9 @@
                            appSecret:@"6658d08d23e9ec41948ab785e2496bb3"  //微信APPSecret
                            wechatCls:[WXApi class]];
     
+    
+    //com.otherplayer.bemore
+    
     return YES;
 }
 

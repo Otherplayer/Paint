@@ -190,15 +190,30 @@
                 //iphone6 69
                 
                 if (finished) {
-                    
+                    [weakSelf.functionView setAlpha:0];
                     
                     CGFloat x = 0;
                     CGFloat y = 20 + 49;
                     CGFloat width = BEScreenWidth;
-                    CGFloat height = BEScreenHeight - heightOfFunctionView / 2 - 69;
+                    CGFloat height = BEScreenHeight - heightOfFunctionView / 2 - 50;
                     if (IS_IPHONE4) {
-                        y = 20 + 40;
-                        height = BEScreenHeight - heightOfFunctionView / 2 - 60;
+                        y = 20 + 30;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 10;
+                    }else if (IS_IPHONE6_PLUS){
+                        x = 0;
+                        y = 20 + 49;
+                        width = BEScreenWidth;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 50;
+                    }else if (IS_IPHONE6){
+                        x = 0;
+                        y = 20 + 45;
+                        width = BEScreenWidth;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 40;
+                    }else if (IS_IPHONE5){
+                        x = 0;
+                        y = 20 + 35;
+                        width = BEScreenWidth;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 40;
                     }
                     
                     CGRect rect = CGRectMake(x, y, width, height);
@@ -209,6 +224,14 @@
                     CGRect imageViewRect = weakSelf.view.frame;
                     imageViewRect.origin.y = -y;
                     imageViewRect.origin.x = -10;
+                    if (IS_IPHONE6) {
+                        imageViewRect.origin.x = -5;
+                    }else if (IS_IPHONE5){
+                        imageViewRect.origin.x = 0;
+                    }else if (IS_IPHONE4){
+                        imageViewRect.origin.x = 0;
+                    }
+                    
                     UIImageView *imageView = [[UIImageView alloc] initWithFrame:imageViewRect];
                     [imageView setImage:image];
                     
@@ -218,6 +241,14 @@
                     
                     CGRect targetRect = rect;
                     targetRect.size.width = rect.size.width - 20;
+                    
+                    if (IS_IPHONE6) {
+                        targetRect.size.width = rect.size.width - 10;
+                    }else if (IS_IPHONE5){
+                        targetRect.size.width = rect.size.width;
+                    }else if (IS_IPHONE4){
+                        targetRect.size.width = rect.size.width;
+                    }
                     UIImage *targetImage = [UIImage imageFromView2:tempView atFrame:targetRect];
                     
                     
@@ -234,7 +265,7 @@
                         [weakSelf shareImage:targetImage type:2];
                     }
                     
-                    
+                    [weakSelf.functionView setAlpha:1];
                 }
                 
                 
