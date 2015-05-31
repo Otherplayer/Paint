@@ -47,7 +47,7 @@
     SegmentWidth = 8;
     
     
-    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:35];
+    UIFont *font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:22];
 //        MTAnimatedLabel *label1 = [[MTAnimatedLabel alloc]initWithFrame:CGRectMake(100, 160, 300, 100)];
         [self.labelAnimation setTextColor:[UIColor blueColor]];
         [self.labelAnimation setFont:font];
@@ -135,29 +135,36 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             CGFloat heightOfFunctionView = BEScreenWidth / 3.0 * 2;
-            UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 0, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2)];
-            if (index == 0) {
-                
-                [UIView animateWithDuration:0.15 animations:^{
-                    [weakSelf.functionView setFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
-                    functionViewIsHidden = YES;
-                    
-                } completion:^(BOOL finished) {
-                    
-                    //iphone6 69
-                    
-                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 20 + 49, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2 - 69)];
-                    UIImageWriteToSavedPhotosAlbum(image,nil, nil, nil);
-                    [[VMProgressHUD sharedInstance] showTipTextOnly:@"截图已保存到相册" dealy:1.2];
-                    
-                }];
-            }else if (index == 1){
             
-                [weakSelf shareImage:image type:1];
-          
-            }else{
-                [weakSelf shareImage:image type:2];
-            }
+            
+            [UIView animateWithDuration:0.15 animations:^{
+                [weakSelf.functionView setFrame:CGRectMake(0, BEScreenHeight - heightOfFunctionView/2, BEScreenWidth, heightOfFunctionView)];
+                functionViewIsHidden = YES;
+                
+            } completion:^(BOOL finished) {
+                
+                //iphone6 69
+                
+                if (finished) {
+                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 20 + 49, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2 - 69)];
+                    if (index == 0) {
+                        
+                        UIImageWriteToSavedPhotosAlbum(image,nil, nil, nil);
+                        [[VMProgressHUD sharedInstance] showTipTextOnly:@"截图已保存到相册" dealy:1.2];
+                        
+                    }else if (index == 1){
+                        
+                        [weakSelf shareImage:image type:1];
+                        
+                    }else{
+                        [weakSelf shareImage:image type:2];
+                    }
+                    
+                    
+                }
+                
+                
+            }];
         });
         
     }];
