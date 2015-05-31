@@ -25,7 +25,7 @@
 }
 
 @property (nonatomic, strong)BEFunctionView *functionView;
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;//背景照片
+@property (strong, nonatomic) UIImageView *backgroundImageView;//背景照片
 @property (weak, nonatomic) IBOutlet UIView *paintView;//画布
 
 @property (weak, nonatomic) IBOutlet UIView *firstView;
@@ -42,6 +42,38 @@
     [self.navigationController applyAppDefaultApprence];
     [self.navigationController setHide:YES];
     
+    CGFloat x = 20;
+    CGFloat y = 95;
+    CGFloat width = BEScreenWidth - x * 2;
+    CGFloat height = BEScreenHeight - y - 150;
+    
+    if (IS_IPHONE6_PLUS) {
+        x = 35;
+        y = 95;
+        width = BEScreenWidth - x * 2;
+        height = BEScreenHeight - y - 150;
+    }else if (IS_IPHONE6){
+        x = 30;
+        y = 90;
+        width = BEScreenWidth - x * 2;
+        height = BEScreenHeight - y - 140;
+    }else if (IS_IPHONE5){
+        x = 25;
+        y = 77;
+        width = BEScreenWidth - x * 2;
+        height = BEScreenHeight - y - 115;
+    }else{
+        x = 25;
+        y = 70;
+        width = BEScreenWidth - x * 2;
+        height = BEScreenHeight - y - 110;
+    }
+    
+    
+    self.backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [self.backgroundImageView setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:self.backgroundImageView];
+    
     
     [self.paintView setHidden:YES];
     SegmentWidth = 8;
@@ -55,13 +87,16 @@
         [self.labelAnimation setTint:[UIColor cyanColor]];
         [self.labelAnimation startAnimating];
 //        [self.view addSubview:label1];
-    
+    UITapGestureRecognizer *tapgesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startHereAction:)];
+    [self.labelAnimation addGestureRecognizer:tapgesture];
 }
 
 
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    
     
     
     
@@ -146,7 +181,19 @@
                 //iphone6 69
                 
                 if (finished) {
-                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(0, 20 + 49, BEScreenWidth, BEScreenHeight - heightOfFunctionView / 2 - 69)];
+                    
+                    
+                    CGFloat x = 0;
+                    CGFloat y = 20 + 49;
+                    CGFloat width = BEScreenWidth;
+                    CGFloat height = BEScreenHeight - heightOfFunctionView / 2 - 69;
+                    if (IS_IPHONE4) {
+                        y = 20 + 40;
+                        height = BEScreenHeight - heightOfFunctionView / 2 - 60;
+                    }
+                    
+                    
+                    UIImage *image = [UIImage imageFromView:weakSelf.view atFrame:CGRectMake(x, y, width, height)];
                     if (index == 0) {
                         
                         UIImageWriteToSavedPhotosAlbum(image,nil, nil, nil);
@@ -278,7 +325,7 @@
 }
 
 
-- (IBAction)startHereAction:(id)sender {
+- (void)startHereAction:(UITapGestureRecognizer *)gesture {
     
     [self.labelAnimation stopAnimating];
     [self.firstView setHidden:YES];
@@ -286,7 +333,10 @@
     [self.paintView setHidden:NO];
 }
 
-
+- (void)updateViewConstraints{
+    [super updateViewConstraints];
+    
+}
 
 
 

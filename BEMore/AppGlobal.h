@@ -21,4 +21,10 @@
 
 
 
+#define IS_IPHONE4 ([UIScreen mainScreen].bounds.size.height == 480.0f)
+#define IS_IPHONE5 ([UIScreen mainScreen].bounds.size.height == 568.0f)
+#define IS_IPHONE6 ([UIScreen mainScreen].bounds.size.height == 667.0f)//375w
+#define IS_IPHONE6_PLUS ([UIScreen mainScreen].bounds.size.height == 736.0f)//414w
+
+
 #endif

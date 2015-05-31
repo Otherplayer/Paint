@@ -23,8 +23,8 @@
     // Override point for customization after application launch.
     
     [ShareSDK registerApp:@"13430bfccdca"];//字符串api20为您的ShareSDK的AppKey
-    [ShareSDK  connectSinaWeiboWithAppKey:@"3285004635"
-                                appSecret:@"60bbce94a4704af141047c52d38e6077"
+    [ShareSDK  connectSinaWeiboWithAppKey:@"2184736711"
+                                appSecret:@"d637c8d12d312ad89b601b592ccac0f3"
                               redirectUri:@"http://open.weibo.com/apps/2184736711/info/advanced"
                               weiboSDKCls:[WeiboSDK class]];
     [ShareSDK connectWeChatWithAppId:@"wx348ba051588ac56f"   //微信APPID
